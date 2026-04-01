@@ -7,7 +7,7 @@
     <!-- SEO Ético -->
     <title>Virgínia Almeida | Psicóloga Clínica e Psicanalista - Recife e Online</title>
     <meta name="description" content="Psicóloga clínica especialista em psicanálise. Atendimento acolhedor em Recife-PE e online para todo o Brasil. 8 anos de experiência em saúde mental.">
-    <meta name="keywords" content="psicóloga clínica, psicanálise, terapia online, psicóloga recife, saúde mental, bem estar emocional">
+    <meta name="keywords" content="psicóloga clínica, psicanálise, terapia online, psicóloga recife, saúde mental, bem estar emocional, burnout">
     <meta name="author" content="Virgínia Almeida">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://virginiaalmeidapsicologa.com">
@@ -41,23 +41,19 @@
                     "Psicanálise",
                     "Psicologia Clínica",
                     "Saúde Mental",
-                    "Bem-estar Emocional"
+                    "Bem-estar Emocional",
+                    "Burnout"
                 ],
                 "hasCredential": "CRP-PE Ativo",
                 "telephone": "+5581993453835",
-                "areaServed": "Brasil",
-                "sameAs": [
-                    "https://wa.me/5581993453835"
-                ]
+                "areaServed": "Brasil"
             },
             {
                 "@type": "LocalBusiness",
                 "@id": "https://virginiaalmeidapsicologa.com/#localbusiness",
                 "name": "Virgínia Almeida - Psicologia Clínica",
-                "description": "Consultório de psicologia clínica especializado em psicanálise, oferecendo atendimento acolhedor e ético em Recife e online",
+                "description": "Consultório de psicologia clínica especializado em psicanálise e tratamento de burnout",
                 "url": "https://virginiaalmeidapsicologa.com",
-                "logo": "virginia-almeida-psicologa.jpg",
-                "image": "virginia-almeida-psicologa.jpg",
                 "telephone": "+5581993453835",
                 "address": {
                     "@type": "PostalAddress",
@@ -65,39 +61,11 @@
                     "addressRegion": "PE",
                     "addressCountry": "BR"
                 },
-                "areaServed": [
-                    {
-                        "@type": "City",
-                        "name": "Recife"
-                    },
-                    {
-                        "@type": "Country",
-                        "name": "Brasil"
-                    }
-                ],
                 "serviceType": [
                     "Psicoterapia Individual",
                     "Psicanálise",
-                    "Acolhimento Psicológico"
-                ],
-                "openingHours": [
-                    "Mo-Fr 08:00-18:00"
-                ],
-                "currenciesAccepted": "BRL",
-                "paymentAccepted": "Pix, Transferência Bancária",
-                "founder": {
-                    "@id": "https://virginiaalmeidapsicologa.com/#person"
-                }
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://virginiaalmeidapsicologa.com/#website",
-                "url": "https://virginiaalmeidapsicologa.com",
-                "name": "Virgínia Almeida - Psicóloga Clínica",
-                "inLanguage": "pt-BR",
-                "publisher": {
-                    "@id": "https://virginiaalmeidapsicologa.com/#person"
-                }
+                    "Tratamento de Burnout"
+                ]
             }
         ]
     }
@@ -108,8 +76,6 @@
             --color-primary: #A67B5B;
             --color-secondary: #C4A882;
             --color-accent: #6B735A;
-            --color-accent-light: #8B9568;
-            --color-accent-pale: #B5C09A;
             --color-bg: #FDFCF9;
             --color-bg-alt: #E8D4C4;
             --color-text: #3D3D3D;
@@ -151,69 +117,12 @@
         .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
-        /* Navegação */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(253, 252, 249, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--color-primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-secondary);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a:hover { color: var(--color-primary); }
-
-        /* Hero Section */
+        /* Hero Section - SEM NAVBAR */
         .hero {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
-            padding: 6rem 2rem 2rem;
+            padding: 2rem 2rem 0 2rem;
             background: linear-gradient(135deg, #FDFCF9 0%, #F5EDE4 50%, #E8DDD4 100%);
             position: relative;
             overflow: hidden;
@@ -278,6 +187,13 @@
             align-items: center;
             position: relative;
             z-index: 1;
+            padding-bottom: 2rem;
+        }
+
+        @media (min-width: 769px) {
+            .hero-container {
+                padding-bottom: 1rem;
+            }
         }
 
         .hero-content { animation: fadeInUp 1s ease; }
@@ -295,7 +211,7 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: var(--color-primary);
             margin-bottom: 0.5rem;
             font-weight: 600;
@@ -316,7 +232,7 @@
             line-height: 1.8;
         }
 
-        /* BOTÃO WHATSAPP NO INÍCIO */
+        /* BOTÃO WHATSAPP */
         .whatsapp-btn-hero {
             display: inline-flex;
             align-items: center;
@@ -376,10 +292,19 @@
             opacity: 0.5;
         }
 
-        /* About Section */
+        /* About Section - COM TEXTO BURNOUT */
         .about {
-            padding: 6rem 2rem;
+            padding: 2rem 2rem 6rem 2rem;
             background-color: var(--color-white);
+            margin-top: -2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 769px) {
+            .about {
+                padding: 1rem 2rem 6rem 2rem;
+            }
         }
 
         .container {
@@ -408,11 +333,58 @@
             border-radius: 2px;
         }
 
+        /* DESTAQUE BURNOUT */
+        .burnout-highlight {
+            background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--color-primary);
+            text-align: left;
+        }
+
+        .burnout-highlight h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .burnout-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .burnout-list li {
+            padding: 0.75rem 0;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .burnout-list li::before {
+            content: '✦';
+            color: var(--color-secondary);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .burnout-warning {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
         .about-text {
             font-size: 1.125rem;
             color: var(--color-text-light);
             line-height: 1.9;
             margin-top: 2rem;
+            text-align: left;
         }
 
         .about-text p { margin-bottom: 1.5rem; }
@@ -483,86 +455,58 @@
             line-height: 1.7;
         }
 
-        /* FORMULÁRIO DE CONTATO NO FINAL */
-        .contact-section {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-medium);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .form-group label {
-            color: var(--color-primary);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            padding: 1rem;
-            border: 2px solid #E8D4C4;
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-            background: #FDFCF9;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--color-secondary);
-            box-shadow: 0 0 0 3px rgba(196, 168, 130, 0.2);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-note {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
+        /* CTA Section - SEM FORMULÁRIO */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #8B6F4E 100%);
+            padding: 5rem 2rem;
             text-align: center;
-            margin-top: 1rem;
-        }
-
-        .submit-btn {
-            background: var(--color-accent);
             color: white;
-            padding: 1.25rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 1rem;
         }
 
-        .submit-btn:hover {
-            background: var(--color-primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .whatsapp-btn-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+            border: 2px solid white;
+        }
+
+        .whatsapp-btn-large:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-btn-large svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
         }
 
         /* WhatsApp Flutuante */
@@ -621,38 +565,29 @@
                 text-align: center;
             }
 
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.25rem; }
-            .hero-description { margin: 0 auto 2rem; }
+            .hero-description { margin: 0 auto 2rem; font-size: 1rem; }
             .hero-image { order: -1; }
-            .hero-image img { max-width: 300px; }
+            .hero-image img { max-width: 280px; }
             .section-title { font-size: 2rem; }
-            .contact-container { padding: 2rem 1.5rem; }
             .credentials { gap: 2rem; }
-            .nav-links { display: none; }
 
-            .whatsapp-btn-hero {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+            .burnout-highlight { padding: 1.5rem; }
+            .burnout-highlight h3 { font-size: 1.3rem; }
+            .burnout-list li { font-size: 1rem; }
+
+            .cta-section h2 { font-size: 2rem; }
+            .cta-section p { font-size: 1.1rem; }
+            .whatsapp-btn-large {
+                padding: 1.25rem 2rem;
+                font-size: 1.1rem;
             }
         }
     </style>
-<base target="_blank">
 </head>
 <body>
-    <!-- Navegação -->
-    <nav role="navigation" aria-label="Menu principal">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Virgínia Almeida</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- INÍCIO: Hero com Botão WhatsApp -->
+    <!-- INÍCIO: Hero sem Navbar -->
     <section class="hero">
         <div class="hero-pattern"></div>
         <div class="blob-3"></div>
@@ -662,12 +597,16 @@
                 <h1>Virgínia Almeida</h1>
                 <p class="hero-subtitle">Especialista em Psicanálise</p>
                 <p class="hero-description">
-                    Acolhimento, escuta qualificada e um espaço seguro para o seu desenvolvimento 
-                    emocional. Sua jornada de autoconhecimento começa aqui.
+                    Você se sente cansada por dentro mas não sabe explicar por quê? 
+                    Ofereço acolhimento, escuta qualificada e um espaço seguro para 
+                    que você possa cuidar da sua saúde mental.
                 </p>
 
-                <!-- BOTÃO WHATSAPP NO INÍCIO -->
-                <a href="https://wa.me/5581993453835" class="whatsapp-btn-hero" target="_blank" rel="noopener noreferrer">
+                <!-- BOTÃO WHATSAPP COM MENSAGEM PRÉ-DEFINIDA -->
+                <a href="https://wa.me/5581993453835?text=Oi!%20Gostaria%20de%20marcar%20uma%20consulta." 
+                   class="whatsapp-btn-hero" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                     </svg>
@@ -680,26 +619,48 @@
         </div>
     </section>
 
-    <!-- Sobre -->
+    <!-- Sobre Mim - COM TEXTO SOBRE BURNOUT -->
     <section class="about" id="sobre">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Sobre Mim</h2>
+
+            <!-- DESTAQUE BURNOUT -->
+            <div class="burnout-highlight animate-on-scroll">
+                <h3>Você se sente cansada por dentro mas não sabe explicar por quê?</h3>
+                <p style="color: var(--color-text-light); margin-bottom: 1rem;">
+                    Talvez você se reconheça em algum desses sinais:
+                </p>
+                <ul class="burnout-list">
+                    <li>Trabalha muito e ainda sente que é pouco</li>
+                    <li>Está sempre cansada, mas não consegue descansar</li>
+                    <li>Fica no celular pra fugir, mas sai pior do que entrou</li>
+                    <li>Sente que deveria estar bem, mas não está</li>
+                </ul>
+                <p class="burnout-warning">
+                    Não normalize esses sinais que o seu corpo te dá.
+                </p>
+            </div>
+
             <div class="about-text animate-on-scroll">
                 <p>
                     Sou Virgínia Almeida, psicóloga clínica dedicada a oferecer um espaço terapêutico 
-                    acolhedor e seguro para quem busca compreender-se melhor e encontrar novos caminhos 
-                    para o bem-estar emocional.
+                    acolhedor para quem está vivenciando esse tipo de esgotamento emocional. 
+                    Há 8 anos ajudo mulheres a compreenderem que não estão "frescas" ou "exagerando" — 
+                    estão sobrecarregadas e precisam de apoio.
                 </p>
                 <p>
-                    Formada em Psicologia pela <strong>FAFIRE - Pernambuco</strong>, tenho <strong>8 anos de experiência</strong> 
-                    em atendimentos clínicos, auxiliando pacientes a navegarem por desafios emocionais 
-                    e a desenvolverem maior autoconhecimento através da abordagem psicanalítica.
+                    Formada em Psicologia pela <strong>FAFIRE - Pernambuco</strong>, tenho experiência 
+                    em atendimentos clínicos que priorizam a escuta qualificada e o respeito ao seu ritmo. 
+                    Acredito que cuidar da mente não é luxo, é necessidade. E você não precisa carregar 
+                    esse cansaço sozinha.
                 </p>
                 <p>
-                    Acredito na escuta qualificada como instrumento fundamental para a transformação 
-                    pessoal, respeitando o ritmo e a singularidade de cada indivíduo.
+                    Na terapia, trabalhamos juntas para entender o que está por trás desse vazio que não 
+                    passa, dessa sensação de nunca estar fazendo o suficiente. É possível se sentir melhor. 
+                    Dê a si mesma a chance de experimentar isso.
                 </p>
             </div>
+
             <div class="credentials animate-on-scroll">
                 <div class="credential-item">
                     <div class="credential-number">8+</div>
@@ -720,77 +681,46 @@
     <!-- Especialidades -->
     <section class="especialidade">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Psicanálise</h2>
+            <h2 class="section-title animate-on-scroll">Como Posso Ajudar</h2>
             <p style="color: var(--color-text-light); margin-top: 1rem; font-size: 1.125rem;" class="animate-on-scroll">
-                Uma abordagem profunda dedicada ao autoconhecimento e transformação interior
+                Ofereço apoio especializado para situações como:
             </p>
             <div class="especialidade-grid">
                 <div class="especialidade-card animate-on-scroll">
+                    <div class="especialidade-icon">😔</div>
+                    <h3>Burnout e Esgotamento</h3>
+                    <p>Para quem vive exausta, sem energia, sentindo que está funcionando no automático mas não consegue parar.</p>
+                </div>
+                <div class="especialidade-card animate-on-scroll">
                     <div class="especialidade-icon">🧠</div>
                     <h3>Autoconhecimento</h3>
-                    <p>Explore seus padrões de pensamento, emoções e comportamentos para uma compreensão mais profunda de si mesmo.</p>
+                    <p>Entender seus padrões de pensamento, emoções e comportamentos para construir uma relação mais saudável consigo mesma.</p>
                 </div>
                 <div class="especialidade-card animate-on-scroll">
                     <div class="especialidade-icon">🛡️</div>
-                    <h3>Espaço Seguro</h3>
-                    <p>Um ambiente acolhedor e confidencial onde você pode expressar-se livremente sem julgamentos.</p>
-                </div>
-                <div class="especialidade-card animate-on-scroll">
-                    <div class="especialidade-icon">🌱</div>
-                    <h3>Transformação</h3>
-                    <p>Trabalhe questões emocionais profundas e desenvolva recursos internos para uma vida mais plena.</p>
+                    <h3>Espaço de Acolhimento</h3>
+                    <p>Um ambiente seguro e confidencial onde você pode dizer o que sente sem medo de julgamentos ou comparações.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FINAL: Formulário de Contato -->
-    <section class="contact-section" id="contato">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Entre em Contato</h2>
-            <p style="color: var(--color-text-light); margin-top: 1rem; margin-bottom: 2rem;" class="animate-on-scroll">
-                Envie uma mensagem para agendar uma avaliação ou tirar dúvidas sobre o processo terapêutico
-            </p>
-
-            <div class="contact-container animate-on-scroll">
-                <!-- 
-                    INSTRUÇÕES PARA ATIVAR O FORMULÁRIO:
-                    1. Acesse https://formspree.io
-                    2. Crie uma conta gratuita
-                    3. Crie um novo formulário
-                    4. Copie o endpoint (URL) fornecido
-                    5. Cole no action abaixo, substituindo: https://formspree.io/f/xeqwdyky
-                -->
-                <form class="contact-form" action="https://formspree.io/f/xnjovyvy" method="POST">
-                    <div class="form-group">
-                        <label for="nome">Nome completo *</label>
-                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefone">Telefone (WhatsApp) *</label>
-                        <input type="tel" id="telefone" name="telefone" required placeholder="(81) 99999-9999">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre você ou suas dúvidas..."></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
-
-                    <p class="form-note">
-                        Seus dados estão protegidos e serão utilizados exclusivamente para contato profissional. 
-                        <br>Responderemos em até 24 horas úteis.
-                    </p>
-                </form>
-            </div>
-        </div>
+    <!-- CTA Final - SEM FORMULÁRIO -->
+    <section class="cta-section" id="contato">
+        <h2>Vamos conversar?</h2>
+        <p>
+            Você não precisa esperar o cansaço passar sozinha. Estou aqui para te ajudar 
+            a entender o que está acontecendo e encontrar caminhos para se sentir bem de verdade.
+        </p>
+        <a href="https://wa.me/5581993453835?text=Oi!%20Gostaria%20de%20marcar%20uma%20consulta." 
+           class="whatsapp-btn-large" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Clique aqui para conversar no WhatsApp
+        </a>
     </section>
 
     <!-- Footer -->
@@ -798,14 +728,17 @@
         <p>&copy; 2026 Virgínia Almeida - Psicóloga Clínica e Psicanalista</p>
         <p style="margin-top: 0.5rem; font-size: 0.8rem;">CRP-PE Ativo | Psicoterapia Presencial e Online</p>
         <p style="margin-top: 0.5rem; font-size: 0.75rem;">
-            <a href="index.html">Início</a> | 
             <a href="blog.html">Blog</a> | 
-            <a href="https://wa.me/5581993453835">WhatsApp</a>
+            <a href="https://wa.me/5581993453835?text=Oi!%20Gostaria%20de%20marcar%20uma%20consulta.">WhatsApp</a>
         </p>
     </footer>
 
     <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5581993453835" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale pelo WhatsApp">
+    <a href="https://wa.me/5581993453835?text=Oi!%20Gostaria%20de%20marcar%20uma%20consulta." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Fale pelo WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
@@ -828,19 +761,6 @@
         }, observerOptions);
 
         document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
-
-        // Máscara para telefone
-        const telefoneInput = document.getElementById('telefone');
-        if (telefoneInput) {
-            telefoneInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length <= 11) {
-                    value = value.replace(/(\d{2})(\d)/, '($1) $2');
-                    value = value.replace(/(\d{5})(\d)/, '$1-$2');
-                    e.target.value = value;
-                }
-            });
-        }
     </script>
 </body>
 </html>

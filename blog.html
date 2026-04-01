@@ -19,58 +19,11 @@
     <meta property="og:image" content="virginia-almeida-psicologa.jpg">
     <meta property="og:locale" content="pt_BR">
 
-    <!-- Schema.org para Blog e Posts -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": "Blog de Psicologia - Virgínia Almeida",
-        "description": "Artigos sobre saúde mental digital e bem-estar emocional",
-        "url": "https://virginiaalmeidapsicologa.com/blog.html",
-        "inLanguage": "pt-BR",
-        "author": {
-            "@type": "Person",
-            "name": "Virgínia Almeida",
-            "url": "https://virginiaalmeidapsicologa.com"
-        },
-        "blogPost": [
-            {
-                "@type": "BlogPosting",
-                "headline": "Burnout Digital: Quando o Cansaço Vem das Telas, Não do Trabalho",
-                "description": "Você chega em casa após um dia de trabalho, deita no sofá e abre o celular 'só por cinco minutos'. Duas horas depois, sente-se mais exausta do que antes...",
-                "author": {
-                    "@type": "Person",
-                    "name": "Virgínia Almeida"
-                },
-                "datePublished": "2026-03-31",
-                "dateModified": "2026-03-31",
-                "articleSection": "Saúde Mental Digital",
-                "keywords": "burnout digital, esgotamento digital, saúde mental digital, terapia online"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "Procrastinação Digital: O Que Você Está Evitando ao Rolar o Feed Infinito?",
-                "description": "Você já parou para pensar por que, no segundo em que o silêncio surge ou a tarefa aperta, sua mão alcança o celular quase por reflexo?",
-                "author": {
-                    "@type": "Person",
-                    "name": "Virgínia Almeida"
-                },
-                "datePublished": "2026-03-31",
-                "dateModified": "2026-03-31",
-                "articleSection": "Saúde Mental Digital",
-                "keywords": "procrastinação digital, scroll infinito, psicanálise, saúde mental"
-            }
-        ]
-    }
-    </script>
-
     <style>
         :root {
             --color-primary: #A67B5B;
             --color-secondary: #C4A882;
             --color-accent: #6B735A;
-            --color-accent-light: #8B9568;
-            --color-accent-pale: #B5C09A;
             --color-bg: #FDFCF9;
             --color-bg-alt: #E8D4C4;
             --color-text: #3D3D3D;
@@ -97,57 +50,22 @@
             50% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
         }
 
-        /* Navegação */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(253, 252, 249, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        /* Header Blog - SEM NAVBAR */
+        .blog-header {
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
+        .logo-link {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             color: var(--color-primary);
             text-decoration: none;
             font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover { color: var(--color-primary); }
-
-        /* Header Blog */
-        .blog-header {
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
-            padding: 6rem 2rem 3rem;
-            text-align: center;
-            margin-top: 60px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: inline-block;
+            margin-bottom: 2rem;
         }
 
         .blog-header h1 {
@@ -252,7 +170,7 @@
             color: var(--color-accent);
         }
 
-        /* Botão CTA */
+        /* CTA Final */
         .cta-section {
             background: linear-gradient(135deg, var(--color-primary) 0%, #8B6F4E 100%);
             padding: 4rem 2rem;
@@ -355,31 +273,18 @@
 
         /* Responsividade */
         @media (max-width: 768px) {
-            .blog-header { padding: 5rem 1.5rem 2rem; }
+            .blog-header { padding: 3rem 1.5rem 2rem; }
             .blog-header h1 { font-size: 2rem; }
             .blog-post { padding: 2rem 1.5rem; }
             .blog-post h2 { font-size: 1.5rem; }
-            .nav-links { display: none; }
             .blog-container { padding: 2rem 1.5rem; }
         }
     </style>
-<base target="_blank">
 </head>
 <body>
-    <!-- Navegação -->
-    <nav role="navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Virgínia Almeida</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Header -->
+    <!-- Header sem Navbar -->
     <header class="blog-header">
+        <a href="index.html" class="logo-link">← Virgínia Almeida</a>
         <h1>Blog de Psicologia</h1>
         <p>Reflexões sobre saúde mental digital, bem-estar emocional e nossa relação com a tecnologia</p>
     </header>
@@ -388,105 +293,79 @@
     <main class="blog-container">
 
         <!-- Post 1: Burnout Digital -->
-        <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
+        <article class="blog-post">
             <div class="post-meta">
                 <span class="post-category">Saúde Mental Digital</span>
-                <time datetime="2026-03-31" itemprop="datePublished">31 de Março, 2026</time>
+                <time datetime="2026-03-31">31 de Março, 2026</time>
             </div>
 
-            <h2 itemprop="headline">Burnout Digital: Quando o Cansaço Vem das Telas, Não do Trabalho</h2>
+            <h2>Burnout Digital: Quando o Cansaço Vem das Telas, Não do Trabalho</h2>
 
-            <div itemprop="articleBody">
+            <p>
+                Você chega em casa após um dia de trabalho, deita no sofá e abre o celular "só por cinco minutos". 
+                Duas horas depois, sente-se mais exausta do que antes, com uma sensação estranha de vazio e culpa. 
+                Se o trabalho formal já terminou, por que você continua tão esgotada? Esse é o <strong>burnout digital</strong>: 
+                uma forma contemporânea de esgotamento psíquico intensificada pela hiperconectividade.
+            </p>
+
+            <p>
+                Talvez você se reconheça em algum desses sinais: trabalha muito e ainda sente que é pouco, 
+                está sempre cansada mas não consegue descansar de verdade, ou sente que deveria estar bem, mas não está. 
+                <strong>Não normalize esses sinais que o seu corpo te dá.</strong>
+            </p>
+
+            <p>
+                O burnout digital difere da síndrome de burnout tradicional. Enquanto o segundo está ligado a ambientes 
+                laborais específicos com demandas excessivas, o primeiro emerge da exposição contínua a telas, 
+                notificações e demandas de resposta que mantêm o sistema nervoso em estado de alerta prolongado. 
+                A neurociência explica: a cada nova notificação, nosso cérebro libera dopamina em doses que criam 
+                um ciclo de dependência sutil.
+            </p>
+
+            <div class="cta-post">
                 <p>
-                    Você chega em casa após um dia de trabalho, deita no sofá e abre o celular "só por cinco minutos". 
-                    Duas horas depois, sente-se mais exausta do que antes, com uma sensação estranha de vazio e culpa. 
-                    Se o trabalho formal já terminou, por que você continua tão esgotada? Esse é o <strong>burnout digital</strong>: 
-                    uma forma contemporânea de esgotamento psíquico intensificada pela hiperconectividade e pela dissolução 
-                    das fronteiras entre trabalho, consumo e descanso.
+                    Se você se reconhece nesse padrão de esgotamento digital, considere iniciar um 
+                    <strong>processo terapêutico</strong>. Cuidar da sua saúde mental no mundo digital é também um 
+                    gesto ético de resistência à cultura da produtividade desenfreada.
                 </p>
-
-                <p>
-                    Do ponto de vista clínico, o burnout digital difere da síndrome de burnout tradicional. Enquanto o 
-                    segundo está ligado a ambientes laborais específicos com demandas excessivas, o primeiro emerge da 
-                    exposição contínua a telas, notificações e demandas de resposta que mantêm o sistema nervoso em 
-                    estado de alerta prolongado. A neurociência explica: a cada nova notificação, nosso cérebro libera 
-                    dopamina em doses que criam um ciclo de dependência sutil. Estamos sempre "ligados", mesmo quando 
-                    deveríamos estar recuperando nossa energia psíquica.
-                </p>
-
-                <p>
-                    O contexto atual agrava essa condição. Vivemos numa sociedade neoliberal que convoca o sujeito a 
-                    produzir, performar e se auto-otimizar continuamente, inclusive no espaço digital. O descanso passa 
-                    a ser percebido como improdutivo, e a pausa como falha. A tecnologia, nesse cenário, opera como 
-                    mediadora da aceleração: intensifica a vigilância por métricas, estimula a comparação constante e 
-                    sustenta a ideia de disponibilidade permanente.
-                </p>
-
-                <p>
-                    Mas há uma saída ética e clínica para esse ciclo. A <strong>psicologia online especializada em saúde mental digital</strong> 
-                    pode auxiliar no desenvolvimento de limites saudáveis na sua relação com as tecnologias. A terapia online 
-                    oferece um espaço protegido para ressignificar sua relação com o trabalho e o descanso, compreendendo 
-                    como seus padrões de uso digital afetam sua saúde mental. Reaprender limites não é luxo, é necessidade clínica.
-                </p>
-
-                <div class="cta-post">
-                    <p>
-                        Se você se reconhece nesse padrão de esgotamento digital, considere iniciar um 
-                        <strong>processo terapêutico online</strong>. Cuidar da sua saúde mental no mundo digital é também um 
-                        gesto ético de resistência à cultura da produtividade desenfreada.
-                    </p>
-                </div>
             </div>
         </article>
 
         <!-- Post 2: Procrastinação Digital -->
-        <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
+        <article class="blog-post">
             <div class="post-meta">
                 <span class="post-category">Saúde Mental Digital</span>
-                <time datetime="2026-03-31" itemprop="datePublished">31 de Março, 2026</time>
+                <time datetime="2026-03-31">31 de Março, 2026</time>
             </div>
 
-            <h2 itemprop="headline">Procrastinação Digital: O Que Você Está Evitando ao Rolar o Feed Infinito?</h2>
+            <h2>Procrastinação Digital: O Que Você Está Evitando ao Rolar o Feed Infinito?</h2>
 
-            <div itemprop="articleBody">
+            <p>
+                Você já parou para pensar por que, no segundo em que o silêncio surge ou a tarefa aperta, sua mão 
+                alcança o celular quase por reflexo? A <strong>procrastinação digital</strong> não é apenas preguiça ou 
+                falta de organização. Trata-se de uma fuga do confronto com limites, falhas e o tempo que não controlamos.
+            </p>
+
+            <p>
+                O problema é que ninguém descansa "vendo Reels". Você não levanta do sofá revigorada; levanta dissociada, 
+                com a sensação de ter perdido tempo precioso. O scroll infinito não preenche o vazio existencial, ele apenas 
+                o adia. E cada vez que adiamos o encontro com nossos próprios pensamentos, fortalecemos um padrão de fuga 
+                que afeta nossa capacidade de criar, trabalhar e nos relacionar.
+            </p>
+
+            <p>
+                Fica no celular pra fugir, mas sai pior do que entrou. Esse é o ciclo vicioso da procrastinação digital. 
+                A terapia pode auxiliar na compreensão do que está por trás dessa necessidade de fuga constante, 
+                desenvolvendo uma conexão mais genuína consigo mesma, fora das telas.
+            </p>
+
+            <div class="cta-post">
                 <p>
-                    Você já parou para pensar por que, no segundo em que o silêncio surge ou a tarefa aperta, sua mão 
-                    alcança o celular quase por reflexo? A <strong>procrastinação digital</strong> não é apenas preguiça ou 
-                    falta de organização. Para a psicanálise, trata-se de uma fuga da "castração" — o confronto com limites, 
-                    falhas e o tempo que não controlamos. Fazer algo real nos expõe ao risco de fracasso. O algoritmo, por 
-                    outro lado, oferece a ilusão de completeza e entretenimento sem risco, anestesiando nossa capacidade de 
-                    tolerar o tédio produtivo.
+                    Se a procrastinação digital tem impedido você de realizar projetos importantes ou simplesmente de 
+                    se sentir presente na sua vida, o apoio de uma <strong>psicóloga especializada</strong> 
+                    pode fazer a diferença. Você merece atenção psíquica de qualidade — 
+                    e isso inclui aprender a desconectar para se reconectar com o que realmente importa.
                 </p>
-
-                <p>
-                    O problema é que ninguém descansa "vendo Reels". Você não levanta do sofá revigorada; levanta dissociada, 
-                    com a sensação de ter perdido tempo precioso. O scroll infinito não preenche o vazio existencial, ele apenas 
-                    o adia. E cada vez que adiamos o encontro com nossos próprios pensamentos, fortalecemos um padrão de fuga 
-                    que afeta nossa capacidade de criar, trabalhar e nos relacionar de forma autêntica.
-                </p>
-
-                <p>
-                    A comparação constante com vidas editadas gera uma insuficiência crônica. A bolha de opinião nos impede 
-                    de pensar fora do que já acreditamos. Quando entregamos o controle do que consumimos para uma inteligência 
-                    artificial focada em retenção, permitimos que ela dite nosso humor, nossas inseguranças e nosso tempo. 
-                    O resultado é uma exaustão mental que nem sempre sabemos de onde vem.
-                </p>
-
-                <p>
-                    A <strong>terapia online</strong> pode auxiliar na compreensão do que está por trás da sua procrastinação digital. 
-                    No processo clínico, investigamos juntas o que você sente que está evitando quando abre o Instagram 
-                    "só por um minutinho". A psicologia oferece ferramentas para ressignificar sua relação com o tempo, 
-                    o tédio e a produtividade, desenvolvendo uma conexão mais genuína consigo mesma, fora das telas.
-                </p>
-
-                <div class="cta-post">
-                    <p>
-                        Se a procrastinação digital tem impedido você de realizar projetos importantes ou simplesmente de 
-                        se sentir presente na sua vida, o apoio de uma <strong>psicóloga online especializada em saúde mental digital</strong> 
-                        pode fazer a diferença. O primeiro passo é reconhecer que você merece atenção psíquica de qualidade — 
-                        e isso inclui aprender a desconectar para se reconectar com o que realmente importa.
-                    </p>
-                </div>
             </div>
         </article>
 
@@ -495,8 +374,11 @@
     <!-- CTA Final -->
     <section class="cta-section">
         <h2>Vamos conversar?</h2>
-        <p>Se você se identificou com esses temas, estou aqui para ajudar. A terapia online oferece um espaço seguro para cuidar da sua saúde mental.</p>
-        <a href="https://wa.me/5581993453835" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+        <p>Se você se identificou com esses temas, estou aqui para ajudar. A terapia oferece um espaço seguro para cuidar da sua saúde mental.</p>
+        <a href="https://wa.me/5581993453835?text=Eu%20Gostaria%20de%20marcar%20uma%20consulta." 
+           class="whatsapp-btn" 
+           target="_blank" 
+           rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
@@ -511,12 +393,16 @@
         <p style="margin-top: 0.5rem; font-size: 0.75rem;">
             <a href="index.html">Início</a> | 
             <a href="blog.html">Blog</a> | 
-            <a href="index.html#contato">Contato</a>
+            <a href="https://wa.me/5581993453835?text=Oi!%20Gostaria%20de%20marcar%20uma%20consulta.">WhatsApp</a>
         </p>
     </footer>
 
     <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5581993453835" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale pelo WhatsApp">
+    <a href="https://wa.me/5581993453835?text=Oi!%20Gostaria%20de%20marcar%20uma%20consulta." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Fale pelo WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
